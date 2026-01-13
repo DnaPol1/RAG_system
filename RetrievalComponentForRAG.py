@@ -1,5 +1,7 @@
-import numpy as np
-
+from typing import List, Dict
+from sentence_transformers import SentenceTransformer
+from vectorStore import VectorStore
+from reranker import CrossEncoderReranker
 
 class RetrievalComponent:
     """
@@ -9,11 +11,21 @@ class RetrievalComponent:
     - возвращает score + текст + metadata
     """
 
-    def __init__(self, vector_store, embedding_model, top_k=1, min_similarity=0.2):
+    def __init__(self,
+                 vector_store: VectorStore,
+                 embedding_model: SentenceTransformer,
+                 top_k: int = 10,
+                 top_k_candidates: int = 20,
+                 use_reranker: bool = False,
+                 reranker: CrossEncoderReranker = None):
         self.vector_store = vector_store
         self.embedding_model = embedding_model
+
         self.top_k = top_k
-        self.min_similarity = min_similarity
+        self.top_k_candidates = top_k_candidates
+
+        self.use_reranker = use_reranker
+        self.reranker = reranker
 
     def retrieve(self, query: str):
         """
@@ -44,7 +56,7 @@ class RetrievalComponent:
             best["score"]
         )
 
-    def retrieve_top_context(self, query: str):
+    def retrieve_top_context(self, query: str) -> List[Dict]:
         """
         Возвращает:
         - text (str)
@@ -56,17 +68,19 @@ class RetrievalComponent:
             normalize_embeddings=True
         )
 
-        results = self.vector_store.search(query_embedding, top_k=self.top_k)
+        # 1. Bi-encoder retrieval
+        candidates = self.vector_store.search(
+            query_embedding,
+            top_k=self.top_k_candidates
+        )
 
-        if not results:
-            return None, None, 0.0
+        # 2. Optional reranking
+        if self.use_reranker and self.reranker is not None:
+            return self.reranker.rerank(
+                query=query,
+                documents=candidates,
+                top_k=self.top_k
+            )
 
-        best = results[0]
-
-        if best["score"] < self.min_similarity:
-            return None, None, best["score"]
-
-        if not best["text"].strip():
-            return None, None, best["score"]
-
-        return results
+        # fallback: просто берём top-k
+        return candidates[:self.top_k]
