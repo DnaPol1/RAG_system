@@ -3,6 +3,7 @@ import faiss
 import numpy as np
 import pickle
 from typing import List, Dict, Any
+from chunk import Chunk
 
 class VectorStore:
     """
@@ -23,7 +24,7 @@ class VectorStore:
         self.metadatas: List[Dict[str, Any]] = []
         self.documents = []
 
-    def add(self, embeddings: np.ndarray, texts: List[str], metadatas: List[Dict[str, Any]], documents):
+    def add(self, embeddings: np.ndarray, chunks):
         """
         Добавление эмбеддингов + текстов + метаданных
         """
@@ -36,19 +37,19 @@ class VectorStore:
                 f"got {embeddings.shape}"
             )
 
-        if len(texts) != embeddings.shape[0]:
-            raise ValueError("texts count must match embeddings count")
+        if len(chunks) != embeddings.shape[0]:
+            raise ValueError(
+                f"Chunks count ({len(chunks)}) "
+                f"must match embeddings count ({embeddings.shape[0]})"
+            )
 
-        if len(metadatas) != embeddings.shape[0]:
-            raise ValueError("metadatas count musy match embeddings count")
-
-        #нормализация для cosine similarity
+        # нормализация для cosine similarity
         faiss.normalize_L2(embeddings)
 
-        self.index.add(embeddings)
-        self.texts.extend(texts)
-        self.metadatas.extend(metadatas)
-        self.documents.extend(documents)
+        for i, chunk in enumerate(chunks):
+            self.index.add(embeddings[i:i+1])
+            self.texts.append(chunk["text"])
+            self.metadatas.append(chunk["metadata"])
 
     def search(self, query_embedding: np.ndarray, top_k: int = 1):
         """
@@ -83,6 +84,11 @@ class VectorStore:
     def save(self, path: str):
         os.makedirs(path, exist_ok=True)
 
+        print("DEBUG SAVE PATH:", repr(path))
+        print("EXISTS:", os.path.exists(path))
+        print("IS DIR:", os.path.isdir(path))
+        print("CWD:", os.getcwd())
+
         faiss.write_index(self.index, os.path.join(path, "index.faiss"))
 
         with open(os.path.join(path, "texts.pkl"), "wb") as f:
@@ -99,7 +105,15 @@ class VectorStore:
 
     @classmethod
     def load(cls, path: str):
-        index = faiss.read_index(os.path.join(path, "index.faiss"))
+        index_path = os.path.join(path, "index.faiss")
+
+        if not os.path.exists(index_path):
+            raise FileNotFoundError(
+                f"FAISS index not found: {index_path}\n"
+                f"Files in directory: {os.listdir(path) if os.path.exists(path) else "DIR NOT FOUND"}"
+            )
+
+        index = faiss.read_index(index_path)
 
         with open(os.path.join(path, "texts.pkl"), "rb") as f:
             texts = pickle.load(f)

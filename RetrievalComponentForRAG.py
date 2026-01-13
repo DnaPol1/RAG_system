@@ -56,7 +56,7 @@ class RetrievalComponent:
             normalize_embeddings=True
         )
 
-        results = self.vector_store.search(query_embedding, top_k=1)
+        results = self.vector_store.search(query_embedding, top_k=self.top_k)
 
         if not results:
             return None, None, 0.0
@@ -69,8 +69,4 @@ class RetrievalComponent:
         if not best["text"].strip():
             return None, None, best["score"]
 
-        return (
-            best["text"],
-            best["metadata"],
-            best["score"]
-        )
+        return results

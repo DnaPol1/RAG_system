@@ -8,6 +8,19 @@ class PDFLoader:
     def __init__(self, folder_path: str):
         self.folder_path = folder_path
 
+    def load_one_pdf(self, file_path):
+        if file_path.lower().endswith(".pdf"):
+            text = self._extract_text_from_pdf(file_path)
+            cleaned_text = self.remove_empty_lines(text)
+
+            if cleaned_text.strip():
+                document = Document(
+                    text=cleaned_text,
+                    source=file_path
+                )
+
+            return document
+
     def load_pdfs(self) -> List[Document]:
         documents = []
 

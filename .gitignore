@@ -1,0 +1,11 @@
+/tests/
+/document_loader.py
+/easy_rag.py
+/generate_test_files.py
+/RAG_examples.ipynb
+/rag_vector_db_v1.docs
+/rag_vector_db_v1.index
+/RetrievalComponent.py
+/retrievalDebag.py
+/test_loader.py
+/visualization/test_mathplotlib.py
