@@ -1,138 +1,473 @@
 [
   {
     "query": "До какого числа продлён отбор инвестиционных проектов?",
-    "relevant_sources": "Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"
+    "relevant_sources": ["Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"]
   },
   {
     "query": "Продлили ли сроки подачи заявок на инвестпроекты?",
-    "relevant_sources": "Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"
+    "relevant_sources": ["Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"]
   },
   {
     "query": "Можно ли подать заявку после 1 сентября 2025 года?",
-    "relevant_sources": "Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"
+    "relevant_sources": ["Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"]
   },
   {
     "query": "Какие новые сроки приёма заявок Минпромторгом?",
-    "relevant_sources": "Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"
+    "relevant_sources": ["Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"]
   },
   {
     "query": "Когда заканчивается приём заявок на включение проекта в перечень?",
-    "relevant_sources": "Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"
+    "relevant_sources": ["Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"]
   },
   {
     "query": "Есть ли продление отбора инвестпроектов в 2025 году?",
-    "relevant_sources": "Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"
+    "relevant_sources": ["Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"]
   },
   {
     "query": "Актуальные сроки подачи заявок на инвестпроекты Минпромторга?",
-    "relevant_sources": "Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"
+    "relevant_sources": ["Prikaz_o_vnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_12_maya_2025_g_№ 2194.pdf"]
   },
   {
     "query": "Какие сроки подачи заявок на инвестпроекты в 2024 году?",
-    "relevant_sources": "prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"
+    "relevant_sources": ["prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"]
   },
   {
     "query": "До какого числа принимаются заявки на включение инвестпроекта?",
-    "relevant_sources": "prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"
+    "relevant_sources": ["prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"]
   },
   {
     "query": "Перенесли ли сроки приёма заявок в 2024 году?",
-    "relevant_sources": "prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"
+    "relevant_sources": ["prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"]
   },
   {
     "query": "Когда заканчивается приём заявок по приказу №168?",
-    "relevant_sources": "prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"
+    "relevant_sources": ["prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"]
   },
   {
     "query": "Где посмотреть актуальные сроки отбора инвестпроектов в 2024?",
-    "relevant_sources": "prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"
+    "relevant_sources": ["prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"]
   },
   {
     "query": "Приём заявок на инвестпроекты: февраль–июль или позже?",
-    "relevant_sources": "prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"
+    "relevant_sources": ["prikaz_ovnesenii_izmeneniy_v_prikaz_Ministerstva_promyshlennosti_i_torgovli_Rossiyskoy_Federatsii_ot_18_yanvarya_2024_g._№_168.pdf"]
   },
   {
     "query": "Какие субсидии доступны для промышленных предприятий?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Что такое субсидия на возмещение недополученных доходов?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Кто может получить субсидию по льготным кредитам?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Как работает льготная процентная ставка по инвесткредитам?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Как рассчитывается размер субсидии по кредиту?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "От чего зависит размер компенсации банку?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Какие требования к участникам отбора субсидий?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Какие документы нужны для участия в отборе?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Кто может быть получателем субсидии?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Может ли МСП участвовать в программе льготного кредитования?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Какие банки участвуют в программе субсидирования?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Как подать заявку на субсидию?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Через какую систему подаются заявки?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Что такое ГИСП и как через неё подать документы?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Какой порядок подачи заявки на инвестпроект?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Можно ли отозвать или изменить заявку?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Как проходит отбор инвестиционных проектов?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Сколько рассматривается заявка на субсидию?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Что делать, если проект отправили на доработку?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Какие основания для отказа в субсидии?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
   },
   {
     "query": "Когда публикуются результаты отбора?",
-    "relevant_sources": "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    "relevant_sources": ["Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"]
+  },
+  {
+    "query": "Что считается офшорной юрисдикцией?",
+    "relevant_sources": ["PRIKAZ_ot_26_maya_2022_g._N_83n.pdf"]
+  },
+  {
+    "query": "В каких странах нельзя иметь учредителей для получения господдержки??",
+    "relevant_sources": ["PRIKAZ_ot_26_maya_2022_g._N_83n.pdf"]
+  },
+  {
+    "query": "Можно ли получить субсидию, если учредитель зарегистрирован за границей?",
+    "relevant_sources": ["PRIKAZ_ot_26_maya_2022_g._N_83n.pdf"]
+  },
+  {
+    "query": "Какие страны входят в офшорный список Минфина?",
+    "relevant_sources": ["PRIKAZ_ot_26_maya_2022_g._N_83n.pdf"]
+  },
+  {
+    "query": "Можно ли участвовать в программе поддержки при регистрации в ОАЭ?",
+    "relevant_sources": ["PRIKAZ_ot_26_maya_2022_g._N_83n.pdf"]
+  },
+  {
+    "query": "Кипр считается офшорной территорией?",
+    "relevant_sources": ["PRIKAZ_ot_26_maya_2022_g._N_83n.pdf"]
+  },
+  {
+    "query": "Является ли Делавэр офшором для целей господдержки?",
+    "relevant_sources": ["PRIKAZ_ot_26_maya_2022_g._N_83n.pdf"]
+  },
+  {
+    "query": "Где посмотреть официальный перечень офшорных стран?",
+    "relevant_sources": ["PRIKAZ_ot_26_maya_2022_g._N_83n.pdf"]
+  },
+  {
+    "query": "Как оцениваются проекты при отборе?",
+    "relevant_sources": ["Prilozhenie_№_5_k_protokolu_zasedaniya_Nablyudatelnogo_soveta_PPK_«Rossiyskiy_ekologicheskiy_operator»_ot_«17»_fevralya_2023_goda_№_33.pdf"]
+  },
+  {
+    "query": "По каким критериям комиссия принимает решение?",
+    "relevant_sources": ["Prilozhenie_№_5_k_protokolu_zasedaniya_Nablyudatelnogo_soveta_PPK_«Rossiyskiy_ekologicheskiy_operator»_ot_«17»_fevralya_2023_goda_№_33.pdf"]
+  },
+  {
+    "query": "Кто принимает решение о предоставлении поддержки?",
+    "relevant_sources": ["Prilozhenie_№_5_k_protokolu_zasedaniya_Nablyudatelnogo_soveta_PPK_«Rossiyskiy_ekologicheskiy_operator»_ot_«17»_fevralya_2023_goda_№_33.pdf"]
+  },
+  {
+    "query": "Какой орган рассматривает заявки?",
+    "relevant_sources": ["Prilozhenie_№_5_k_protokolu_zasedaniya_Nablyudatelnogo_soveta_PPK_«Rossiyskiy_ekologicheskiy_operator»_ot_«17»_fevralya_2023_goda_№_33.pdf"]
+  },
+  {
+    "query": "Можно ли узнать причину отказа?",
+    "relevant_sources": ["Prilozhenie_№_5_k_protokolu_zasedaniya_Nablyudatelnogo_soveta_PPK_«Rossiyskiy_ekologicheskiy_operator»_ot_«17»_fevralya_2023_goda_№_33.pdf"]
+  },
+  {
+    "query": "Что такое протокол комиссии по отбору проектов?",
+    "relevant_sources": ["Prilozhenie_№_5_k_protokolu_zasedaniya_Nablyudatelnogo_soveta_PPK_«Rossiyskiy_ekologicheskiy_operator»_ot_«17»_fevralya_2023_goda_№_33.pdf"]
+  },
+  {
+    "query": "Как оформляются результаты конкурсного отбора?",
+    "relevant_sources": ["Prilozhenie_№_5_k_protokolu_zasedaniya_Nablyudatelnogo_soveta_PPK_«Rossiyskiy_ekologicheskiy_operator»_ot_«17»_fevralya_2023_goda_№_33.pdf"]
+  },
+  {
+    "query": "Кто уже получил грант на сельский туризм?",
+    "relevant_sources": ["Protokol_OL-10-289.pdf"]
+  },
+  {
+    "query": "Какие проекты выигрывают отбор?",
+    "relevant_sources": ["Protokol_OL-10-289.pdf"]
+  },
+  {
+    "query": "Сколько баллов нужно для получения гранта?",
+    "relevant_sources": ["Protokol_OL-10-289.pdf"]
+  },
+  {
+    "query": "Какие регионы чаще получают поддержку?",
+    "relevant_sources": ["Protokol_OL-10-289.pdf"]
+  },
+  {
+    "query": "Какие суммы грантов реально выдают?",
+    "relevant_sources": ["Protokol_OL-10-289.pdf"]
+  },
+  {
+    "query": "Есть ли примеры успешных проектов?",
+    "relevant_sources": ["Protokol_OL-10-289.pdf"]
+  },
+  {
+    "query": "Где посмотреть список победителей конкурса?",
+    "relevant_sources": ["Protokol_OL-10-289.pdf"]
+  },
+  {
+    "query": "Какие проекты прошли отбор в 2023–2024 годах?",
+    "relevant_sources": ["Protokol_OL-10-289.pdf"]
+  },
+  {
+    "query": "Почему мне отказали в субсидии / гранте?",
+    "relevant_sources": [
+      "Prilozhenie_№_5_k_protokolu_zasedaniya_Nablyudatelnogo_soveta_PPK_«Rossiyskiy_ekologicheskiy_operator»_ot_«17»_fevralya_2023_goda_№_33.pdf",
+      "Protokol_OL-10-289.pdf",
+      "PRIKAZ_ot_26_maya_2022_g._N_83n.pdf",
+      "140-П.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"
+    ]
+  },
+  {
+    "query": "Могу ли я участвовать в отборе, если учредитель иностранный?",
+    "relevant_sources": [
+      "PRIKAZ_ot_26_maya_2022_g._N_83n.pdf",
+      "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    ]
+  },
+  {
+    "query": "Какие проекты реально получают поддержку и на каких условиях?",
+    "relevant_sources": [
+      "Protokol_OL-10-289.pdf",
+      "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf"
+    ]
+  },
+  {
+    "query": "Как комиссия принимает решение о выделении гранта?",
+    "relevant_sources": [
+      "Prilozhenie_№_5_k_protokolu_zasedaniya_Nablyudatelnogo_soveta_PPK_«Rossiyskiy_ekologicheskiy_operator»_ot_«17»_fevralya_2023_goda_№_33.pdf",
+      "Protokol_OL-10-289.pdf"
+    ]
+  },
+  {
+    "query": "Каким документом установлен порядок реализации программы поддержки?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Какие основные требования предъявляются к проектам по данной программе?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Какие этапы прохождения проекта предусмотрены положением?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Какие основания для отказа в поддержке предусмотрены регламентом?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Какие обязательства возникают у получателя поддержки?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Как правильно подготовить бизнес-план для подачи заявки?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие разделы обязательно должны быть в бизнес-плане проекта?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Что писать в резюме бизнес-плана?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Как описать продукт проекта в бизнес-плане?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие ошибки в бизнес-плане чаще всего приводят к замечаниям экспертов?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Как правильно подготовить финансовую модель проекта?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "В каком формате должна быть финансовая модель?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие финансовые показатели обязательно рассчитываются в проекте?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Что такое NPV, IRR и срок окупаемости проекта?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Почему финансовую модель могут отправить на доработку?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие документы нужно подготовить для подачи проекта на поддержку?",
+    "relevant_sources": [
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf",
+      "24_РУКОВСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"
+    ]
+  },
+  {
+    "query": "Как связаны бизнес-план и финансовая модель проекта?",
+    "relevant_sources": [
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"
+    ]
+  },
+  {
+    "query": "Какие требования предъявляются к содержанию проекта при подаче заявки?",
+    "relevant_sources": [
+      "140-П.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"
+    ]
+  },
+  {
+    "query": "Почему проект могут отклонить на этапе экспертизы?",
+    "relevant_sources": [
+      "140-П.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"
+    ]
+  },
+  {
+    "query": "Какие требования предъявляются к проекту для получения поддержки?",
+    "relevant_sources": [
+      "140-П.pdf",
+      "Reshenie_o_poryadke_predostavleniya_subsidii_№_24-64132-01596-R_ot_24_iyulya_2024_g.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"
+    ]
+  },
+  {
+    "query": "Какие этапы проходит проект от подачи заявки до принятия решения?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Какие требования предъявляются к заявителю по данной программе?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "В каких случаях заявка может быть возвращена без рассмотрения?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Можно ли доработать проект после подачи заявки?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Какие сроки рассмотрения заявок установлены регламентом?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Какие органы участвуют в рассмотрении и утверждении проекта?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Какие обязательства возникают у получателя поддержки после одобрения проекта?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Может ли проект быть исключен после одобрения и по каким причинам?",
+    "relevant_sources": ["140-П.pdf"]
+  },
+  {
+    "query": "Зачем требуется бизнес-план при подаче проекта на поддержку?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие цели и эффекты проекта нужно отразить в бизнес-плане?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Как описать рынок сбыта и целевую аудиторию проекта?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Как в бизнес-плане обосновать соответствие проекта программе финансирования?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие данные о компании-заявителе необходимо указать в бизнес-плане?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Как правильно описать бюджет проекта в бизнес-плане?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие приложения можно включить в бизнес-план проекта?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие несоответствия в бизнес-плане чаще всего выявляют эксперты?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Для чего требуется финансовая модель при рассмотрении проекта?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие исходные данные необходимо заложить в финансовую модель?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие прогнозные формы финансовой отчетности должны быть представлены?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Как рассчитывается денежный поток проекта?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Что такое CFADS и зачем он нужен при оценке проекта?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие коэффициенты финансовой устойчивости анализируются при экспертизе?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Как проверить корректность финансовой модели перед подачей?",
+    "relevant_sources": ["24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие ошибки в финансовой модели считаются критичными?",
+    "relevant_sources": ["24_РУКОВСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"]
+  },
+  {
+    "query": "Какие ошибки в документах чаще всего приводят к отказу в поддержке?",
+    "relevant_sources": [
+      "140-П.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf"
+    ]
+  },
+  {
+    "query": "Как подготовить проект так, чтобы он успешно прошел экспертизу?",
+    "relevant_sources": [
+      "140-П.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ БП ПРОЕКТА.pdf",
+      "24_РУКОВОДСТВО ПО ПОДГОТОВКЕ ФМ ПРОЕКТА.pdf",
+      "Prilozhenie_№_5_k_protokolu_zasedaniya_Nablyudatelnogo_soveta_PPK_«Rossiyskiy_ekologicheskiy_operator»_ot_«17»_fevralya_2023_goda_№_33.pdf"
+    ]
   }
 ]

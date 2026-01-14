@@ -13,8 +13,12 @@ def build_vector_db(
     embedding_dim: int = 768
 ) -> VectorStore:
 
+    print("Загрузка документов")
+
     loader = PDFLoader(pdf_folder)
     documents = loader.load_pdfs()
+
+    print("Чанкирование")
 
     chunker = create_chunker(chunker_type, **chunker_config)
 
@@ -28,12 +32,16 @@ def build_vector_db(
 
     texts = [c["text"] for c in all_chunks]
 
+    print("Генерация эмбеддингов")
+
     model = SentenceTransformer(embedding_model_name)
     embeddings = model.encode(
         texts,
         normalize_embeddings=True,
         show_progress_bar=True
     )
+
+    print("Сохранение новой БД")
 
     vector_store = VectorStore(embedding_dim=embedding_dim)
     vector_store.add(embeddings, all_chunks)
