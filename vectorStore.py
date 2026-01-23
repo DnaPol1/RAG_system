@@ -3,7 +3,6 @@ import faiss
 import numpy as np
 import pickle
 from typing import List, Dict, Any
-from chunk import Chunk
 
 class VectorStore:
     """

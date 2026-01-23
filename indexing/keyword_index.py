@@ -3,12 +3,12 @@ from collections import defaultdict
 from indexing.base import BaseIndex
 
 class KeywordIndex(BaseIndex):
-    def build(self, texts, embeddings, metadata):
-        self.texts = texts
-        self.metadata = metadata
+    def build(self, chunk_texts, embeddings, chunk_metadata):
+        self.chunk_texts = chunk_texts
+        self.chunk_metadata = chunk_metadata
         self.index = defaultdict(set)
 
-        for i, text in enumerate(texts):
+        for i, text in enumerate(chunk_texts):
             tokens = set(re.findall(r"[а-яА-Яa-zA-Z]{3,}", text.lower()))
             for token in tokens:
                 self.index[token].add(i)
@@ -27,7 +27,7 @@ class KeywordIndex(BaseIndex):
         ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:top_k]
 
         return [{
-            "text": self.texts[i],
-            "metadata": self.metadata[i],
+            "text": self.chunk_texts[i],
+            "metadata": self.chunk_metadata[i],
             "score": score
         } for i, score in ranked]

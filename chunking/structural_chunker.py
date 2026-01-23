@@ -26,7 +26,9 @@ class StructuralChunker(BaseChunker):
         metadata: Dict[str, Any] | None = None
     ) -> List[Dict[str, Any]]:
 
-        metadata = metadata or {}
+        if metadata is None or "document_id" not in metadata:
+            raise ValueError("metadata must contain document_id")
+
         lines = text.splitlines()
 
         chunks = []

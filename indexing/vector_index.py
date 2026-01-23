@@ -3,10 +3,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 from indexing.base import BaseIndex
 
 class VectorIndex(BaseIndex):
-    def build(self, texts, embeddings, metadata):
-        self.texts = texts
+    def build(self, chunk_texts, embeddings, chunk_metadata):
+        self.chunk_texts = chunk_texts
         self.embeddings = np.array(embeddings)
-        self.metadata = metadata
+        self.chunk_metadata = chunk_metadata
 
     def query(self, query_embedding, top_k=5, query_text=None):
         if query_embedding is None:
@@ -20,8 +20,8 @@ class VectorIndex(BaseIndex):
         results = []
         for i in top_indices:
             results.append({
-                "text": self.texts[i],
-                "metadata": self.metadata[i],
+                "text": self.chunk_texts[i],
+                "metadata": self.chunk_metadata[i],
                 "score": float(sims[i])
             })
         return results

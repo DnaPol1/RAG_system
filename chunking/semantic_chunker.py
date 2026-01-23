@@ -21,7 +21,8 @@ class SemanticChunker(BaseChunker):
         if not text or not text.strip():
             return []
 
-        metadata = metadata or {}
+        if metadata is None or "document_id" not in metadata:
+            raise ValueError("metadata must contain document_id")
 
         raw_chunks = split_legal_text(text)
         chunks = []

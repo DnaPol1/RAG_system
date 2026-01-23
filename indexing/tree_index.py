@@ -3,9 +3,9 @@ from sklearn.neighbors import BallTree
 from indexing.base import BaseIndex
 
 class TreeIndex(BaseIndex):
-    def build(self, texts, embeddings, metadata):
-        self.texts = texts
-        self.metadata = metadata
+    def build(self, chunk_texts, embeddings, chunk_metadata):
+        self.chunk_texts = chunk_texts
+        self.chunk_metadata = chunk_metadata
         self.embeddings = np.array(embeddings)
         self.tree = BallTree(self.embeddings, metric="euclidean")
 
@@ -21,8 +21,8 @@ class TreeIndex(BaseIndex):
         results = []
         for d, i in zip(dist[0], idx[0]):
             results.append({
-                "text": self.texts[i],
-                "metadata": self.metadata[i],
+                "text": self.chunk_texts[i],
+                "metadata": self.chunk_metadata[i],
                 "score": 1 - float(d)
             })
         return results

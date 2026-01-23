@@ -14,9 +14,11 @@ class PDFLoader:
             cleaned_text = self.remove_empty_lines(text)
 
             if cleaned_text.strip():
-                document = Document(
+                document = Document.create(
                     text=cleaned_text,
-                    source=file_path
+                    source_name=os.path.basename(file_path),
+                    source_path=file_path,
+                    doc_type="pdf"
                 )
 
             return document
@@ -33,9 +35,11 @@ class PDFLoader:
 
                 if cleaned_text.strip():
                     documents.append(
-                        Document(
+                        Document.create(
                             text=cleaned_text,
-                            source=filename
+                            source_name=os.path.basename(file_path),
+                            source_path=file_path,
+                            doc_type="pdf"
                         )
                     )
 

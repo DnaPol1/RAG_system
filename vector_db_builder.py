@@ -26,7 +26,7 @@ def build_vector_db(
     for doc in documents:
         chunks = chunker.split(
             text=doc.text,
-            metadata={"source": doc.source}
+            metadata=doc.metadata
         )
         all_chunks.extend(chunks)
 

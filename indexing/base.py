@@ -5,9 +5,9 @@ class BaseIndex(ABC):
     @abstractmethod
     def build(
             self,
-            texts: List[str],
+            chunk_texts: List[str],
             embeddings: Optional[List[list]],
-            metadata: List[Dict[str, Any]]
+            chunk_metadata: List[Dict[str, Any]]
     ):
         """
         :param texts: - чанки

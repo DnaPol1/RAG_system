@@ -3,9 +3,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 from indexing.base import BaseIndex
 
 class LinearIndex(BaseIndex):
-    def build(self, texts, embeddings, metadata):
-        self.texts = texts
-        self.metadata = metadata
+    def build(self, chunk_texts, embeddings, chunk_metadata):
+        self.chunk_texts = chunk_texts
+        self.chunk_metadata = chunk_metadata
         self.embeddings = np.array(embeddings)
 
     def query(self, query_embedding, top_k=5, query_text=None):
@@ -24,7 +24,7 @@ class LinearIndex(BaseIndex):
         )[:top_k]
 
         return [{
-            "text": self.texts[i],
-            "metadata": self.metadata[i],
+            "text": self.chunk_texts[i],
+            "metadata": self.chunk_metadata[i],
             "score": float(score)
         } for i, score in ranked]

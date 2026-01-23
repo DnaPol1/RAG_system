@@ -15,18 +15,18 @@ class RecursiveTextChunker(BaseChunker):
     def __init__(
         self,
         chunk_size: int = 1000,
-        chunk_overlap: int = 200
+        overlap: int = 200
     ):
         """
         :param chunk_size: максимальный размер чанка (в символах)
         :param chunk_overlap: перекрытие между чанками
         """
         self.chunk_size = chunk_size
-        self.chunk_overlap = chunk_overlap
+        self.chunk_overlap = overlap
 
         self.splitter = RecursiveCharacterTextSplitter(
             chunk_size=chunk_size,
-            chunk_overlap=chunk_overlap,
+            chunk_overlap=overlap,
             separators=[
                 "\n\n",  # абзацы
                 "\n",    # строки
@@ -48,7 +48,8 @@ class RecursiveTextChunker(BaseChunker):
         if not text or not text.strip():
             return []
 
-        metadata = metadata or {}
+        if metadata is None or "document_id" not in metadata:
+            raise ValueError("metadata must contain document_id")
 
         chunks = self.splitter.split_text(text)
 
