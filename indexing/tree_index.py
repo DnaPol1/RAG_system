@@ -1,7 +1,6 @@
-# indexing/tree_index.py
 import numpy as np
 from sklearn.neighbors import BallTree
-from .base import BaseIndex
+from indexing.base import BaseIndex
 
 class TreeIndex(BaseIndex):
     def build(self, texts, embeddings, metadata):
@@ -10,7 +9,10 @@ class TreeIndex(BaseIndex):
         self.embeddings = np.array(embeddings)
         self.tree = BallTree(self.embeddings, metric="euclidean")
 
-    def query(self, query_embedding, top_k=5):
+    def query(self, query_embedding, top_k=5, query_text=None):
+        if query_embedding is None:
+            raise ValueError("TreeIndex requires query_embedding")
+
         dist, idx = self.tree.query(
             np.array(query_embedding).reshape(1, -1),
             k=top_k

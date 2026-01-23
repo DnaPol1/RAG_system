@@ -1,7 +1,12 @@
-from typing import List, Dict
-from .rules import split_legal_text
+from typing import List, Dict, Any
+from chunking.base_chunker import BaseChunker
+from chunking.rules import split_legal_text
 
-class SemanticChunker:
+class SemanticChunker(BaseChunker):
+    """
+    Семантическое чанкование юридических текстов
+    на основе структурных паттернов
+    """
     def __init__(
         self,
         min_chars: int = 300,
@@ -12,14 +17,12 @@ class SemanticChunker:
         self.max_chars = max_chars
         self.overlap = overlap
 
-    def split(self, text: str, metadata: Dict) -> List[Dict]:
-        """
-        Возвращает список чанков:
-        {
-            "text": str,
-            "metadata": dict
-        }
-        """
+    def split(self, text: str, metadata: Dict[str, Any] | None = None) -> List[Dict[str, Any]]:
+        if not text or not text.strip():
+            return []
+
+        metadata = metadata or {}
+
         raw_chunks = split_legal_text(text)
         chunks = []
 
@@ -31,25 +34,25 @@ class SemanticChunker:
                 current += "\n" + part
             else:
                 if len(current) >= self.min_chars:
-                    chunks.append(self._make_chunk(
-                        current, metadata, chunk_id
-                    ))
+                    chunks.append(self._make_chunk(current, metadata, chunk_id))
                     chunk_id += 1
 
-                # overlap
                 current = current[-self.overlap:] + "\n" + part
 
         if len(current) >= self.min_chars:
-            chunks.append(self._make_chunk(
-                current, metadata, chunk_id
-            ))
+            chunks.append(self._make_chunk(current, metadata, chunk_id))
 
         return chunks
 
-    def _make_chunk(self, text: str, metadata: Dict, chunk_id: int) -> Dict:
+    def _make_chunk(self, text: str, metadata: Dict[str, Any], chunk_id: int) -> Dict[str, Any]:
+        text = text.strip()
+
         meta = metadata.copy()
-        meta["chunk_id"] = chunk_id
-        meta["chunk_size"] = len(text)
+        meta.update({
+            "chunk_id": chunk_id,
+            "chunk_size": len(text),
+            "chunking_strategy": "semantic"
+        })
 
         return {
             "text": text.strip(),

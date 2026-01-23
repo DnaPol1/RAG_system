@@ -54,8 +54,10 @@ class RecursiveTextChunker(BaseChunker):
 
         results = []
         for i, chunk in enumerate(chunks):
+            chunk = chunk.strip()
+
             results.append({
-                "text": chunk.strip(),
+                "text": chunk,
                 "metadata": {
                     **metadata,
                     "chunk_id": i,

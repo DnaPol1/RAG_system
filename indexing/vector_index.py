@@ -1,7 +1,6 @@
-# indexing/vector_index.py
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-from .base import BaseIndex
+from indexing.base import BaseIndex
 
 class VectorIndex(BaseIndex):
     def build(self, texts, embeddings, metadata):
@@ -9,7 +8,10 @@ class VectorIndex(BaseIndex):
         self.embeddings = np.array(embeddings)
         self.metadata = metadata
 
-    def query(self, query_embedding, top_k=5):
+    def query(self, query_embedding, top_k=5, query_text=None):
+        if query_embedding is None:
+            raise ValueError("VectorIndex requires query_embedding")
+
         query_vec = np.array(query_embedding).reshape(1, -1)
         sims = cosine_similarity(query_vec, self.embeddings)[0]
 

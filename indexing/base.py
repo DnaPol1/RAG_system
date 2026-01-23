@@ -1,18 +1,29 @@
-# indexing/base.py
 from abc import ABC, abstractmethod
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Optional
 
 class BaseIndex(ABC):
-    def __init__(self):
-        self.texts: List[str] = []
-        self.metadata: List[Dict[str, Any]] = []
-
     @abstractmethod
-    def build(self, texts: List[str], embeddings: List[list], metadata: List[dict]):
+    def build(
+            self,
+            texts: List[str],
+            embeddings: Optional[List[list]],
+            metadata: List[Dict[str, Any]]
+    ):
+        """
+        :param texts: - чанки
+        :param embeddings: - эмбеддниги (если применимо)
+        :param metadata: - метаданные чанков
+        :return:
+        """
         pass
 
     @abstractmethod
-    def query(self, query_embedding: list, top_k: int = 5) -> List[Dict]:
+    def query(
+            self,
+            query_embedding: Optional[list],
+            top_k: int = 5,
+            query_text: Optional[str] = None
+    ) -> List[Dict[str, Any]]:
         """
         Возвращает список:
         {

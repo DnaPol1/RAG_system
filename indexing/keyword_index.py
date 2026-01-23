@@ -1,7 +1,6 @@
-# indexing/keyword_index.py
 import re
 from collections import defaultdict
-from .base import BaseIndex
+from indexing.base import BaseIndex
 
 class KeywordIndex(BaseIndex):
     def build(self, texts, embeddings, metadata):
@@ -14,7 +13,10 @@ class KeywordIndex(BaseIndex):
             for token in tokens:
                 self.index[token].add(i)
 
-    def query(self, query_embedding, top_k=5, query_text: str = ""):
+    def query(self, query_embedding=None, top_k=5, query_text=None):
+        if not query_text:
+            raise ValueError("KeywordIndex requires query_text")
+
         tokens = set(re.findall(r"[а-яА-Яa-zA-Z]{3,}", query_text.lower()))
         scores = defaultdict(int)
 

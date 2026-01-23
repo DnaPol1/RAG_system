@@ -1,7 +1,6 @@
-# indexing/linear_index.py
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-from .base import BaseIndex
+from indexing.base import BaseIndex
 
 class LinearIndex(BaseIndex):
     def build(self, texts, embeddings, metadata):
@@ -9,7 +8,10 @@ class LinearIndex(BaseIndex):
         self.metadata = metadata
         self.embeddings = np.array(embeddings)
 
-    def query(self, query_embedding, top_k=5):
+    def query(self, query_embedding, top_k=5, query_text=None):
+        if query_embedding is None:
+            raise ValueError("LinearIndex requires query_embedding")
+
         sims = cosine_similarity(
             np.array(query_embedding).reshape(1, -1),
             self.embeddings
