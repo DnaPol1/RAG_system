@@ -4,7 +4,7 @@ from typing import List, Dict, Any
 
 class DatasetViewer:
     """
-    Просмотр чанков, эмбеддингов и результатов retrieval в виде таблицы.
+    Просмотр чанков, эмбеддингов и результатов retriever в виде таблицы.
     """
 
     @staticmethod

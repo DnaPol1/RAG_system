@@ -5,14 +5,12 @@ import numpy as np
 from retriever.base import BaseRetriever
 from retriever.lexical import lexical_score
 
-
 class HybridRetriever(BaseRetriever):
     """
     Универсальный retriever для RAG:
     - vector retrieval
     - lexical scoring
-    - hybrid scoring
-    - multi-query aggregation (phase 5.1)
+    - optional multi-query retrieval
     """
 
     def __init__(
@@ -50,14 +48,7 @@ class HybridRetriever(BaseRetriever):
         """
         Основной retrieval pipeline
         """
-
-        aggregated = defaultdict(lambda: {
-            "text": None,
-            "metadata": None,
-            "vector_score": 0.0,
-            "lexical_score": 0.0,
-            "score": 0.0,
-        })
+        aggregated = {}
 
         # основной запрос
         self._retrieve_and_merge(
@@ -103,38 +94,62 @@ class HybridRetriever(BaseRetriever):
         )
 
         for doc in docs:
-            # ЕДИНСТВЕННЫЙ идентификатор документа
-            key = doc["metadata"]["source_path"]
+            vector_id = doc["vector_id"]
 
             vector_score = float(doc.get("score", 0.0))
             lex_score = lexical_score(query, doc.get("text", ""))
 
-            if storage[key]["text"] is None:
-                storage[key]["text"] = doc["text"]
-                storage[key]["metadata"] = doc["metadata"]
+            # если chunk впервые встретился
+            if vector_id not in storage:
+                storage[vector_id] = {
+                    "vector_id": vector_id,
+                    "text": doc["text"],
+                    "metadata": doc["metadata"],
 
-            storage[key]["vector_score"] += vector_score * weight
-            storage[key]["lexical_score"] += lex_score * weight
+                    "vector_score": 0.0,
+                    "lexical_score": 0.0,
+                    "score": 0.0,
+                }
+
+            storage[vector_id][
+                "vector_score"
+            ] += vector_score * weight
+
+            storage[vector_id][
+                "lexical_score"
+            ] += lex_score * weight
 
     def _apply_hybrid_scoring(self, docs: List[Dict]) -> None:
         """
         score = alpha * norm(vector) + beta * norm(lexical)
         """
 
+        if not docs:
+            return
+
         v_scores = np.array(
             [d["vector_score"] for d in docs],
             dtype=np.float32
         )
+
         l_scores = np.array(
             [d["lexical_score"] for d in docs],
             dtype=np.float32
         )
 
+        # normalization
         if v_scores.max() > 0:
             v_scores /= v_scores.max()
 
         if l_scores.max() > 0:
             l_scores /= l_scores.max()
 
-        for d, v, l in zip(docs, v_scores, l_scores):
-            d["score"] = self.alpha * v + self.beta * l
+        for d, v, l in zip(
+                docs,
+                v_scores,
+                l_scores
+        ):
+            d["score"] = (
+                    self.alpha * float(v) +
+                    self.beta * float(l)
+            )

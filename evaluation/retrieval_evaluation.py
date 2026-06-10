@@ -2,12 +2,14 @@ import json
 import numpy as np
 from typing import List, Dict
 
-from RetrievalComponentForRAG import RetrievalComponent
+from retriever.SimpleVectorRetriever import SimpleVectorRetriever
 
 
 class RetrievalEvaluation:
-    def __init__(self, retriever: RetrievalComponent = None):
+    def __init__(self, k_values, json_path: str, retriever: SimpleVectorRetriever = None):
         self.retriever = retriever
+        self.k_values = k_values
+        self.test_data = self.load_data_from_json(json_path)
 
     def load_data_from_json(self, json_path: str) -> List[Dict]:
         """
@@ -16,8 +18,9 @@ class RetrievalEvaluation:
         Ожидаемый формат:
         [
             {
-                "query": str,
-                "relevant_sources": [str, str, ...]
+                "question": str,
+                "answer": str,
+                "pos_vec_ids": [int, int, ...]
             }
         ]
         """
@@ -27,96 +30,34 @@ class RetrievalEvaluation:
         test_data = []
         for item in data:
             test_data.append({
-                "query": item["query"],
-                "relevant_sources": set(item["relevant_sources"])
+                "question": item["question"],
+                "pos_vec_ids": set(item["pos_vec_ids"])
             })
 
         return test_data
 
-    def calculate_hit_rate_simple(
-        self,
-        test_data: List[Dict],
-        k_values: List[int] = [1, 3, 5, 10]
-    ) -> Dict[str, float]:
+    def calculate_hit_rate(self):
         """
-        Вычисляет Hit Rate@k.
-
-        Hit@k = 1, если хотя бы один релевантный документ
-        попал в top-k результатов.
+        test_data: [
+            {"question": str, "pos_vec_ids": set(int, ...)}
+        ]
+        retriever: объект, у которого есть метод retrieve_top_chunks(query)
         """
 
-        results = {f"hit_rate@{k}": [] for k in k_values}
+        results = {f"hit_rate@{k}": [] for k in self.k_values}
 
-        max_k = max(k_values)
-        self.retriever.top_k = max_k
+        for item in self.test_data:
+            query = item["question"]
+            relevant_ids = set(item["pos_vec_ids"])
 
-        for item in test_data:
-            query = item["query"]
-            relevant_sources = item["relevant_sources"]
+            retrieved_items = self.retriever.retrieve_top_chunks(query)
+            retrieved_ids = [r["vector_id"] for r in retrieved_items if r["vector_id"] is not None]
 
-            retrieved_items = self.retriever.retrieve_top_context(query)
-
-            retrieved_sources = [
-                r["metadata"].get("source")
-                for r in retrieved_items
-                if r.get("metadata")
-            ]
-
-            for k in k_values:
-                top_k_sources = retrieved_sources[:k]
-
-                hit = any(
-                    src in relevant_sources
-                    for src in top_k_sources
-                )
-
+            for k in self.k_values:
+                top_k_ids = retrieved_ids[:k]
+                hit = any(_id in relevant_ids for _id in top_k_ids)
                 results[f"hit_rate@{k}"].append(1 if hit else 0)
 
-        return {
-            metric: float(np.mean(values))
-            for metric, values in results.items()
-        }
-
-    def calculate_document_recall(
-            self,
-            test_data: List[Dict],
-            k_values: List[int] = [1, 3, 5, 10]
-    ) -> Dict[str, float]:
-        """
-        Document Recall@k:
-        доля релевантных документов, найденных в top-k
-        """
-
-        results = {f"doc_recall@{k}": [] for k in k_values}
-
-        for item in test_data:
-            query = item["query"]
-            relevant_sources = set(item["relevant_sources"])
-
-            if not relevant_sources:
-                continue  # на всякий случай
-
-            max_k = max(k_values)
-            self.retriever.top_k = max_k
-
-            retrieved_items = self.retriever.retrieve_top_context(query)
-
-            # source документов, найденных ретривером
-            retrieved_sources = [
-                r["metadata"].get("source")
-                for r in retrieved_items
-                if r.get("metadata")
-            ]
-
-            for k in k_values:
-                top_k_sources = set(retrieved_sources[:k])
-
-                found = relevant_sources & top_k_sources
-                recall = len(found) / len(relevant_sources)
-
-                results[f"doc_recall@{k}"].append(recall)
-
-        return {
-            k: float(np.mean(v)) if v else 0.0
-            for k, v in results.items()
-        }
+        # средние значения
+        hit_rate_scores = {metric: float(np.mean(vals)) for metric, vals in results.items()}
+        return hit_rate_scores

@@ -1,0 +1,9 @@
+EMB_MODEL_NAME = "ai-forever/sbert_large_nlu_ru"
+EMB_DIM = 1024
+VEC_STORE_PATH = r"C:\IT\ragData\hnsw\0527\lc_300_50"
+TEST_DATA_PATH = r"C:\IT\ragData\hnsw\0602\lc_200_50_bge-m3"
+PDF_FOLDER = r"C:\Users\Полина\Desktop\test_RAG_DB"
+HF_TOKEN = "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"
+SEC_EMB_MODEL_NAME = "BAAI/bge-m3"
+LOCAL_SBERT_PATH = r"C:\Users\Полина\PycharmProjects\RAG_system\local_models\ai-forever_sbert_large_nlu_ru"
+LOCAL_BAAI_PATH = r"C:\Users\Полина\PycharmProjects\RAG_system\local_models\BAAI_bge-m3"

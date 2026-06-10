@@ -1,17 +1,22 @@
+import os
+os.environ['HF_HUB_DISABLE_SYMLINKS_WARNING'] = '1'
+
 from loader import PDFLoader
 from vectorStore import VectorStore
 from chunking import create_chunker
 from sentence_transformers import SentenceTransformer
+import time
 
+from config import LOCAL_BAAI_PATH
 
 def build_vector_db(
     pdf_folder: str,
     db_path: str,
     chunker_type: str,
     chunker_config: dict,
-    embedding_model_name: str = "sentence-transformers/LaBSE",
-    embedding_dim: int = 768
-) -> VectorStore:
+    embedding_dim: int = 1024
+):
+    start = time.time()
 
     print("Загрузка документов")
 
@@ -34,9 +39,10 @@ def build_vector_db(
 
     print("Генерация эмбеддингов")
 
-    model = SentenceTransformer(embedding_model_name)
+    model = SentenceTransformer(LOCAL_BAAI_PATH)
     embeddings = model.encode(
         texts,
+        batch_size=32,
         normalize_embeddings=True,
         show_progress_bar=True
     )
@@ -46,5 +52,6 @@ def build_vector_db(
     vector_store = VectorStore(embedding_dim=embedding_dim)
     vector_store.add(embeddings, all_chunks)
     vector_store.save(db_path)
+    print(f"Время генерации векторной БД:{(time.time() - start):.4f} сек")
 
-    return vector_store, model
+    vector_store.summary()
