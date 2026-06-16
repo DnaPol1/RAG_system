@@ -1,6 +1,7 @@
+import uuid
 from dataclasses import dataclass
 from typing import Dict, Any
-import uuid
+
 
 @dataclass
 class Document:

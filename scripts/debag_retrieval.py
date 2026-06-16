@@ -1,13 +1,15 @@
-import os
-from sentence_transformers import SentenceTransformer
 import json
-from pathlib import Path
+import os
 from datetime import datetime
+from pathlib import Path
 
-from config import SEC_EMB_MODEL_NAME, HF_TOKEN, TEST_DATA_PATH, VEC_STORE_PATH, LOCAL_BAAI_PATH
-from vectorStore import VectorStore
-from retriever.SimpleVectorRetriever import SimpleVectorRetriever
+from sentence_transformers import SentenceTransformer
+
+from configs.config import SEC_EMB_MODEL_NAME, HF_TOKEN, LOCAL_BAAI_PATH
 from evaluation.retrieval_evaluation import RetrievalEvaluation
+from core.retriever.SimpleVectorRetriever import SimpleVectorRetriever
+from core.vectorStore import VectorStore
+
 
 def save_results(
         results: dict,
@@ -118,7 +120,7 @@ if __name__ == "__main__":
     retriever = SimpleVectorRetriever(vector_store, embedding_model=embedding_model, top_k=top_k)
     evaluator = RetrievalEvaluation(
         k_values=k_values,
-        json_path=r"C:\Users\Полина\PycharmProjects\RAG_system\dataset_0602_200_50.json",
+        json_path=r"../datasets/dataset_0602_200_50.json",
         retriever=retriever
     )
     results = evaluator.calculate_hit_rate()
@@ -127,7 +129,7 @@ if __name__ == "__main__":
 
     save_results(
         results=results,
-        output_dir="evaluation_results",
+        output_dir="../evaluation_results",
         model_name=SEC_EMB_MODEL_NAME,
         retriever_name="FAISS_HNSW",
         total_questions=len(evaluator.test_data),

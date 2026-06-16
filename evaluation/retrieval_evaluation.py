@@ -1,8 +1,9 @@
 import json
-import numpy as np
 from typing import List, Dict
 
-from retriever.SimpleVectorRetriever import SimpleVectorRetriever
+import numpy as np
+
+from core.retriever.SimpleVectorRetriever import SimpleVectorRetriever
 
 
 class RetrievalEvaluation:

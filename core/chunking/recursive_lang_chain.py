@@ -1,9 +1,11 @@
 from typing import List, Dict, Any, Optional
+
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from transformers import AutoTokenizer
 
-from chunking.base_chunker import BaseChunker
-from config import LOCAL_SBERT_PATH
+from core.chunking.base_chunker import BaseChunker
+from configs.config import LOCAL_SBERT_PATH
+
 
 class RecursiveLangChainChunker(BaseChunker):
     """

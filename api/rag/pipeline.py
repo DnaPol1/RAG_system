@@ -1,5 +1,6 @@
-from retriever.SimpleVectorRetriever import SimpleVectorRetriever as Retriever
-from llm_gigachat.gigaChat import GigaChatClient
+from core.llm.gigaChat import GigaChatClient
+from core.retriever.SimpleVectorRetriever import SimpleVectorRetriever as Retriever
+
 
 class RAGPipline:
 
@@ -22,7 +23,7 @@ class RAGPipline:
     context = "\n\n".join([res["text"] for res in result])
     prompt = self.build_augmented_prompt(query, context)
     with open(
-      r"C:\Users\Полина\PycharmProjects\RAG_system\llm_gigachat\API.txt", "r",
+      r"/llm/API.txt", "r",
       encoding="utf-8") as f:
       API_KEY = f.readline().strip()
     llm = GigaChatClient(credentials=API_KEY)

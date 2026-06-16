@@ -1,8 +1,9 @@
 import os
-from typing import List
 import re
-import pdfplumber
 from collections import Counter
+from typing import List
+
+import pdfplumber
 
 from document import Document
 

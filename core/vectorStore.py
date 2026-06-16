@@ -1,10 +1,11 @@
 import os
-import faiss
-import numpy as np
 import pickle
 from typing import List, Dict, Any
 
-from config import EMB_DIM
+import faiss
+import numpy as np
+
+from configs.config import EMB_DIM
 
 
 class VectorStore:

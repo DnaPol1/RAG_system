@@ -1,13 +1,6 @@
 /tests/
 /debug/
 /techViewer/
-/document_loader.py
-/easy_rag.py
-/generate_test_files.py
-/RAG_examples.ipynb
-/rag_vector_db_v1.docs
-/rag_vector_db_v1.index
-/retriever/RetrievalComponent.py
-/tests/retrievalDebag.py
-/tests/test_loader.py
-/visualization/test_mathplotlib.py
+/evaluation_results/
+/local_models/
+/datasets/
