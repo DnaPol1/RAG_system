@@ -39,12 +39,34 @@ The pipeline consists of the following stages:
 ---
 
 ## 🗂 Project Structure
-api/ # FastAPI application
-core/ # Core modules (LLM, loader, vector store)
-chunking/ # Text chunking strategies
-retriever/ # Vector search logic
-evaluation/ # Retrieval evaluation scripts
-configs/ # Configuration files
-scripts/ # Utility scripts (build DB, evaluation)
-frontend/ # Web interface (HTML/CSS/JS)
+.
+├── api/
+│   ├── main.py                 # FastAPI entry point
+│   └── rag/
+│       └── pipeline.py        # RAG pipeline orchestration (retrieval + LLM)
 
+├── configs/
+│   └── config.py              # Paths, model settings, constants
+
+├── core/
+│   ├── chunking/              # Text chunking strategies
+│   ├── llm/                   # GigaChat integration and prompts
+│   ├── retriever/             # Vector search (FAISS retrieval logic)
+│   ├── document.py            # Document schema (metadata + text)
+│   ├── loader.py              # PDF loading and preprocessing
+│   └── vectorStore.py         # FAISS-based vector database
+
+├── evaluation/
+│   └── retrieval_evaluation.py # Hit Rate@K evaluation pipeline
+
+├── frontend/
+│   └── index.html            # Simple web UI (chat interface)
+
+├── scripts/
+│   ├── build_test_dataset.py  # Build dataset for evaluation
+│   ├── build_vector_db.py     # Build FAISS index from documents
+│   ├── debug_retrieval.py     # Debug retrieval results
+│   ├── vec_db_summary.py      # Vector DB inspection tool
+│   └── vector_db_builder.py   # Core pipeline for building index
+
+└── README.md
