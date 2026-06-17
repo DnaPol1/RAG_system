@@ -16,7 +16,7 @@ app.mount("/static", StaticFiles(directory="frontend"), name="static")
 
 @app.get("/", response_class=HTMLResponse)
 def get_page():
-    with open(f"../frontend/index.html", "r", encoding="utf-8") as f:
+    with open(f"./frontend/index.html", "r", encoding="utf-8") as f:
         return f.read()
 
 class QueryRequest(BaseModel):

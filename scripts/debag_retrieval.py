@@ -5,7 +5,7 @@ from pathlib import Path
 
 from sentence_transformers import SentenceTransformer
 
-from configs.config import SEC_EMB_MODEL_NAME, HF_TOKEN, LOCAL_BAAI_PATH
+from configs.config import SEC_EMB_MODEL_NAME, LOCAL_BAAI_PATH
 from evaluation.retrieval_evaluation import RetrievalEvaluation
 from core.retriever.SimpleVectorRetriever import SimpleVectorRetriever
 from core.vectorStore import VectorStore
@@ -115,7 +115,6 @@ if __name__ == "__main__":
     k_values = [1, 3, 5, 10, 15]
     top_k = max(k_values)
     vector_store = VectorStore.load(path=r"C:\IT\ragData\hnsw\0602\lc_200_50_bge-m3")
-    os.environ[HF_TOKEN] = HF_TOKEN
     embedding_model = SentenceTransformer(LOCAL_BAAI_PATH)
     retriever = SimpleVectorRetriever(vector_store, embedding_model=embedding_model, top_k=top_k)
     evaluator = RetrievalEvaluation(

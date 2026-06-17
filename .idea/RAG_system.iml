@@ -9,6 +9,7 @@
       <excludeFolder url="file://$MODULE_DIR$/datasets" />
       <excludeFolder url="file://$MODULE_DIR$/evaluation_results" />
       <excludeFolder url="file://$MODULE_DIR$/local_models" />
+      <excludeFolder url="file://$MODULE_DIR$/.env" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.12 (rag_project)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

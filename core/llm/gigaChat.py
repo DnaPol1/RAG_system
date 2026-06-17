@@ -3,11 +3,15 @@ from gigachat.models import Chat, Messages, MessagesRole
 
 from core.llm.prompts import SYSTEM_PROMPT
 
-with open(r"C:\Users\Полина\PycharmProjects\RAG_system\core\llm\API.txt", "r", encoding="utf-8") as f:
-    API_KEY = f.readline().strip()
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_KEY = os.getenv("GIGACHAT_API_KEY")
 
 class GigaChatClient:
-    def __init__(self):
+    def __init__(self, credentials):
         self.client = GigaChat(
             credentials=API_KEY,
             verify_ssl_certs=False,

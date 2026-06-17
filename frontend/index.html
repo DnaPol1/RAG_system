@@ -127,15 +127,28 @@
 
         addMessage("...", "bot");
 
-        const data = await res.json();
-        const chat = document.getElementById("chat");
-        chat.removeChild(chat.lastChild);
+        let res;
+        try {
+            res = await fetch("/ask", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({ query })
+            });
 
-        if (!res.ok) {
-            addMessage("Ошибка: " + data.detail, "bot")
+            const data = await res.json();
+            const chat = document.getElementById("chat");
+            chat.removeChild(chat.lastChild);
+    
+            if (!res.ok) {
+                addMessage("Ошибка: " + data.detail, "bot")
+            }
+    
+            addMessage(data.answer, "bot");
+        } catch (e) {
+            const chat = document.getElementById("chat");
+            chat.removeChild(chat.lastChild);
+            addMessage("Ошибка сети: " + e.message, "bot");
         }
-
-        addMessage(data.answer, "bot");
     }
 </script>
 </body>
