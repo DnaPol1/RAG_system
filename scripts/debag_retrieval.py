@@ -114,7 +114,7 @@ if __name__ == "__main__":
 
     k_values = [1, 3, 5, 10, 15]
     top_k = max(k_values)
-    vector_store = VectorStore.load(path=r"C:\IT\ragData\hnsw\0602\lc_200_50_bge-m3")
+    vector_store = VectorStore.load(path=r"C:\IT\ragData\hnsw\0617\lc_200_50_bge-m3")
     embedding_model = SentenceTransformer(LOCAL_BAAI_PATH)
     retriever = SimpleVectorRetriever(vector_store, embedding_model=embedding_model, top_k=top_k)
     evaluator = RetrievalEvaluation(

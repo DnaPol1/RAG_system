@@ -13,7 +13,6 @@ model = SentenceTransformer(LOCAL_BAAI_PATH)
 pipline = RAGPipline(vector_store=vector_store, embedding_model=model)
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="frontend"), name="static")
-
 @app.get("/", response_class=HTMLResponse)
 def get_page():
     with open(f"./frontend/index.html", "r", encoding="utf-8") as f:
@@ -24,6 +23,5 @@ class QueryRequest(BaseModel):
 
 @app.post("/ask")
 def ask(request: QueryRequest):
-    result = pipline.run(request.query)
-    print(result)
+    result = pipline.run(query=request.query)
     return {"answer": result["answer"]}

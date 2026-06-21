@@ -3,11 +3,11 @@ os.environ['HF_HUB_DISABLE_SYMLINKS_WARNING'] = '1'
 
 from core.loader import PDFLoader
 from core.vectorStore import VectorStore
-from chunking import create_chunker
 from sentence_transformers import SentenceTransformer
 import time
 
 from configs.config import LOCAL_BAAI_PATH
+from core.chunking.factory import create_chunker
 
 def build_vector_db(
     pdf_folder: str,

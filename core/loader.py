@@ -5,7 +5,7 @@ from typing import List
 
 import pdfplumber
 
-from document import Document
+from core.document import Document
 
 
 class PDFLoader:
